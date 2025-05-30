@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:17
+    container_name: cocos-postgres
+    environment:
+      - POSTGRES_DB=cocosdb
+      - POSTGRES_USER=cocos
+      - POSTGRES_PASSWORD=cocos
+    ports:
+      - '5432:5432'
