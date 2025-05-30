@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "720f1739-83fe-4afc-bfe1-0ca3bc7e5b85",
+		"name": "Cocos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8907792"
+	},
+	"item": [
+		{
+			"name": "PlaceOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"instrumentId\": 1,\n  \"side\": \"CASH_IN\",\n  \"type\": \"MARKET\",\n  \"size\": 4,\n  \"amountToInvest\": 4000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserPortfolio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/portfolio/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instruments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/instruments/search?page=1&pagesize=10&search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"instruments",
+						"search"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "10"
+						},
+						{
+							"key": "search",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

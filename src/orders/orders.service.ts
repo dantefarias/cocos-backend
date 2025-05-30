@@ -128,7 +128,7 @@ export class OrdersService {
       }
     }
 
-    if (!rejectionreason && type === 'MARKET') {
+    if (status !== 'REJECTED' && type === 'MARKET') {
       status = 'FILLED';
     }
 
