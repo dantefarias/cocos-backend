@@ -5,10 +5,10 @@ async function main() {
 
   await prisma.users.createMany({
     data: [
-      { email: 'emiliano@test.com', accountnumber: '10005' },
-      { email: 'jose@test.com', accountnumber: '10006' },
-      { email: 'francisco@test.com', accountnumber: '10007' },
-      { email: 'juan@test.com', accountnumber: '10008' },
+      { email: 'emiliano@test.com', accountnumber: '10001' },
+      { email: 'jose@test.com', accountnumber: '10002' },
+      { email: 'francisco@test.com', accountnumber: '10003' },
+      { email: 'juan@test.com', accountnumber: '10004' },
     ],
   });
 
@@ -50,12 +50,14 @@ async function main() {
       { ticker: 'AGRO', name: 'Agrometal', type: 'ACCIONES' },
       { ticker: 'AUSO', name: 'Autopistas del Sol', type: 'ACCIONES' },
       { ticker: 'BHIP', name: 'Banco Hipotecario S.A.', type: 'ACCIONES' },
-      { ticker: 'BMA', name: 'Banco Macro S.A.', type: 'ACCIONES' },
-      { ticker: 'CRES', name: 'Cresud S.A.', type: 'ACCIONES' },
+      { ticker: 'BOLT', name: 'Boldt S.A.', type: 'ACCIONES'},
+      { ticker: 'CARC', name: 'Carboclor S.A.', type: 'ACCIONES'},
     ],
   });
   await prisma.instruments.createMany({
     data: [
+      { ticker: 'BMA', name: 'Banco Macro S.A.', type: 'ACCIONES' },
+      { ticker: 'CRES', name: 'Cresud S.A.', type: 'ACCIONES' },
       { ticker: 'EDN', name: 'Edenor S.A.', type: 'ACCIONES' },
       { ticker: 'GGAL', name: 'Grupo Financiero Galicia', type: 'ACCIONES' },
       { ticker: 'DGCU2', name: 'Distribuidora De Gas Cuyano S.A.', type: 'ACCIONES' },
@@ -63,13 +65,14 @@ async function main() {
       { ticker: 'CGPA2', name: 'Camuzzi Gas del Sur', type: 'ACCIONES' },
       { ticker: 'CADO', name: 'Carlos Casado', type: 'ACCIONES' },
       { ticker: 'GCLA', name: 'Grupo Clarin S.A.', type: 'ACCIONES' },
-      { ticker: 'RICH', name: 'Laboratorios Richmond', type: 'ACCIONES' },
-      { ticker: 'MOLI', name: 'Molinos Río de la Plata', type: 'ACCIONES' },
-      { ticker: 'VALO', name: 'BCO DE VALORES ACCIONES ORD.', type: 'ACCIONES' },
+      { ticker: 'GRIM', name: 'Grimoldi', type: 'ACCIONES' },
     ],
   });
   await prisma.instruments.createMany({
     data: [
+      { ticker: 'RICH', name: 'Laboratorios Richmond', type: 'ACCIONES' },
+      { ticker: 'MOLI', name: 'Molinos Río de la Plata', type: 'ACCIONES' },
+      { ticker: 'VALO', name: 'BCO DE VALORES ACCIONES ORD.', type: 'ACCIONES' },
       { ticker: 'TGNO4', name: 'Transportadora de Gas del Norte', type: 'ACCIONES' },
       { ticker: 'LOMA', name: 'Loma Negra S.A.', type: 'ACCIONES' },
       { ticker: 'IRSA', name: 'IRSA Inversiones y Representaciones S.A.', type: 'ACCIONES' },
@@ -77,30 +80,30 @@ async function main() {
       { ticker: 'TGSU2', name: 'Transportadora de Gas del Sur', type: 'ACCIONES' },
       { ticker: 'TXAR', name: 'Ternium Argentina S.A', type: 'ACCIONES' },
       { ticker: 'YPFD', name: 'Y.P.F. S.A.', type: 'ACCIONES' },
-      { ticker: 'MORI', name: 'Morixe Hermanos S.A.C.I.', type: 'ACCIONES' },
-      { ticker: 'INVJ', name: 'Inversora Juramento S.A.', type: 'ACCIONES' },
-      { ticker: 'POLL', name: 'Polledo S.A.', type: 'ACCIONES' },
     ],
   });
   await prisma.instruments.createMany({
     data: [
+      { ticker: 'MORI', name: 'Morixe Hermanos S.A.C.I.', type: 'ACCIONES' },
+      { ticker: 'INVJ', name: 'Inversora Juramento S.A.', type: 'ACCIONES' },
+      { ticker: 'POLL', name: 'Polledo S.A.', type: 'ACCIONES' },
       { ticker: 'METR', name: 'MetroGAS S.A.', type: 'ACCIONES' },
       { ticker: 'LONG', name: 'Longvie', type: 'ACCIONES' },
       { ticker: 'SUPV', name: 'Grupo Supervielle S.A.', type: 'ACCIONES' },
       { ticker: 'ROSE', name: 'Instituto Rosenbusch', type: 'ACCIONES' },
       { ticker: 'OEST', name: 'Oeste Grupo Concesionario', type: 'ACCIONES' },
       { ticker: 'COME', name: 'Sociedad Comercial Del Plata', type: 'ACCIONES' },
+      { ticker: 'CEPU', name: 'Central Puerto', type: 'ACCIONES'},
+    ],
+  });
+  await prisma.instruments.createMany({
+    data: [
       { ticker: 'ALUA', name: 'Aluar Aluminio Argentino S.A.I.C.', type: 'ACCIONES' },
       { ticker: 'CTIO', name: 'Consultatio S.A.', type: 'ACCIONES' },
       { ticker: 'TRAN', name: 'Transener S.A.', type: 'ACCIONES' },
       { ticker: 'HAVA', name: 'Havanna Holding', type: 'ACCIONES' },
       { ticker: 'BYMA', name: 'Bolsas y Mercados Argentinos S.A.', type: 'ACCIONES' },
       { ticker: 'ARS', name: 'PESOS', type: 'MONEDA' },
-      { ticker: 'GRIM', name: 'Grimoldi', type: 'ACCIONES' },
-      { ticker: 'CEPU', name: 'Central Puerto', type: 'ACCIONES'},
-      { ticker: 'CARC', name: 'Carboclor S.A.', type: 'ACCIONES'},
-      { ticker: 'BOLT', name: 'Boldt S.A.', type: 'ACCIONES'},
-
     ],
   });
 
